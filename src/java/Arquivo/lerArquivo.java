@@ -5,10 +5,35 @@
  */
 package Arquivo;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author augus
  */
 public class lerArquivo {
+    
+    FileReader filler;
+    BufferedReader buff;
+    public lerArquivo(){
+        try {
+            filler = new FileReader ("cadastra_cliente.html");
+            buff = new BufferedReader(filler);
+            while(buff.ready()){
+                System.out.println(buff.readLine());
+            }
+                buff.close();
+                
+        } catch (FileNotFoundException ex) {
+            
+        }
+           catch (IOException er){
+        }
+    }
     
 }

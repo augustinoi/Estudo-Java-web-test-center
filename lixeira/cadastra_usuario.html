@@ -1,0 +1,153 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>GENTE TELECOM|CADASTRO DE USUARIO</title>
+	<script language="javascript" type="text/javascript">
+		function validar() {
+
+
+			if (form_cadastra_cliente.cpf_cliente.value  == "" ) {
+				alert( "Preencha o campo com o CPF" );
+				form_cadastra_cliente.cpf_cliente.focus();
+				return false;
+			}
+			if (form_cadastra_cliente.rg_cliente.value  == "" ) {
+				alert( "Preencha o campo com o RG" );
+				form_cadastra_cliente.rg_cliente.focus();
+				return false;
+			}
+			if (form_cadastra_cliente.nome_cliente.value  == "" ) {
+				alert( "Preencha o campo com o nome do cliente" );
+				form_cadastra_cliente.nome_cliente.focus();
+				return false;
+			}
+			if (form_cadastra_cliente.telefone_cliente.value  == "" ) {
+				alert( "Preencha o campo com o n�mero de telefone" );
+				form_cadastra_cliente.telefone_cliente.focus();
+				return false;
+			}
+			if (form_cadastra_cliente.endereco_cliente.value  == "" ) {
+				alert( "Preencha o campo com o endere�o" );
+				form_cadastra_cliente.endereco_cliente.focus();
+				return false;
+			}
+			if (form_cadastra_cliente.email_cliente.value  == "" ) {
+				alert( "Preencha o campo com o email" );
+				form_cadastra_cliente.email_cliente.focus();
+				return false;
+			}
+    </script>
+		
+</head>
+
+<body>
+	<div id="banner">
+			<p id="nome_usuario">USUÁRIO:</p>
+
+	</div>
+	
+	<div id="principal">
+		<nav class="navegacao">
+			<ul class="menu_principal">
+			<li><a href="administracao.html" >HOME</a>
+				</li>
+				<li><a href="#" >Vendas</a>
+					<ul class="submenu">
+						<li><a href="#" >Realizar<br> Venda</a>
+						</li>
+						<li><a href="#" >Vendas<br>Registradas</a>
+						</li>
+						<li><a href="#" >Cancelar<br>Venda</a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="#" >Estoque</a>
+					<ul class="submenu">
+						<li><a href="#" >CADASTRAR<br></a>
+						</li>
+						<li><a href= "#"></a>
+						</li>
+						<li><a href="#" ></a>
+						</li>
+						<li><a href="#" ></a>
+						</li>
+						<li><a href="#" ></a>
+						</li>
+						<li><a href="#" ></a>
+						</li>
+						<li><a href="#" ></a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="clientes.html" >Clientes</a>
+					<ul class="submenu">
+						<li><a href="cadastra_cliente.html">CADASTRAR<br>CLIENTE</a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="usuarios.html" >Usuários</a>
+					<ul class="submenu">
+						<li><a href="cadastra_usuario.html" >CADASTRAR USUÁRIOS</a>
+						</li>
+					</ul>
+				</li>
+
+				<li><a href="logout.html" >Sair</a>
+				</li>
+			</ul>
+		</nav>
+		
+		<div id="conteudo">
+			<h2>FORMULÁRIO DE CADASTRO DE USUÁRIO</h2>
+			<hr>
+			<form  method="post" action="processa_cadastra_cliente.html" name="form_cadastra_cliente" style="margin-left: 15px;color: white;" >
+			
+				<table>
+					
+						<tr><td>
+					CPF: </td><td><input type="text" name="cpf_cliente" style="width:80px;" size="11" maxlength="11" >
+						</td></tr>
+				
+						<tr><td> 
+					RG:  </td><td>
+					<input type="text" name="servico_contratado_cliente" style="width:108px;" size="15" maxlength="15" >
+						</td></tr>
+						
+						<tr><td> 
+					NOME: </td><td>
+					<input type="text" name="nome_cliente" style=" width:500px;" size="50" maxlength="50">
+						</td></tr>
+						
+						<tr><td> 
+					TELEFONE: </td><td>
+					<input type="text" name="telefone_cliente" style="width:80px;" size="11" maxlength="11">
+						</td></tr>
+						
+						<tr><td> 
+					ENDEREÇO: </td><td>
+					<input type="text" name="endereco_cliente" style="width:500px;" size="50" maxlength="50" >
+						</td></tr>
+						
+						<tr><td> 
+					EMAIL: </td><td>
+					<input type="text" name="email_cliente" style="width:500px;" size="50" maxlength="50" >
+						</td></tr>
+
+				        <tr><td> 
+					TIPO DE USUÁRIO: </td><td>
+					<input type="text" name="tipo_usuario" style="width:100px;" size="10" maxlength="10" >
+						</td></tr>
+				</table>
+					<br>
+					 <center><input type="submit" id="button" value="Cadastrar Usuário" onclick="return validar()"> </center>
+				
+				</form>
+			</div>
+		<div id="rodape">
+
+		</div>
+	</div>
+
+</body>
+
+</html>
